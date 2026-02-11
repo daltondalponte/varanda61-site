@@ -1,26 +1,103 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #060b14;
+  --foreground: #f1f7ff;
+  --surface: #0f1724;
+  --muted: #9fb0c6;
+  --accent: #35c1d6;
+  --accent-strong: #2aa3b5;
+  --teal: #35c1d6;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-manrope);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #060b14;
+    --foreground: #f1f7ff;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-manrope), system-ui, -apple-system, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-fraunces), "Times New Roman", serif;
+}
+
+.hero-sunrise {
+  background: radial-gradient(
+      circle at 15% 15%,
+      rgba(53, 193, 214, 0.22),
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 85% 10%,
+      rgba(41, 115, 198, 0.2),
+      transparent 45%
+    ),
+    linear-gradient(145deg, #060b14 0%, #0b1220 45%, #0e1a2e 100%);
+}
+
+.paper-grid {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.04) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 90px 90px;
+  opacity: 0.25;
+}
+
+.soft-shadow {
+  box-shadow: 0 30px 70px rgba(3, 8, 18, 0.55);
+}
+
+@keyframes floatSlow {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.float-slow {
+  animation: floatSlow 9s ease-in-out infinite;
+}
+
+.fade-up {
+  animation: fadeUp 0.8s ease-out both;
+}
+
+.fade-delay-1 {
+  animation-delay: 0.15s;
+}
+
+.fade-delay-2 {
+  animation-delay: 0.3s;
+}
+
+.fade-delay-3 {
+  animation-delay: 0.45s;
 }
