@@ -36,6 +36,9 @@ export default function Home() {
           <a className="transition hover:text-[color:var(--foreground)]" href="#contato">
             Contato
           </a>
+          <a className="transition hover:text-[color:var(--foreground)]" href="/politica-de-privacidade">
+            Privacidade
+          </a>
         </nav>
           <a
             className="rounded-full border border-[color:var(--accent)] px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--accent)] transition hover:bg-[color:var(--accent)] hover:text-[color:var(--background)]"
@@ -222,11 +225,11 @@ export default function Home() {
                 </p>
                 <a
                   className="font-semibold text-[color:var(--foreground)] transition hover:text-[color:var(--accent-strong)]"
-                  href="https://wa.me/5516996265698"
+                  href="https://wa.me/5516992338970"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  (16) 99626-5698
+                  (16) 99233-8970
                 </a>
                 <p className="text-xs text-[color:var(--muted)]">Apenas WhatsApp</p>
               </div>
